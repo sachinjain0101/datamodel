@@ -19,6 +19,8 @@ public class TblAzureConsumer implements Serializable {
     @NotNull
     @Column(name = "SequenceNumber")
     private long sequenceNumber;
+    @Column(name = "IntegrationKey")
+    private String integrationKey;
     @Lob
     @Column(name = "Message", length=5000000)
     private String message;
@@ -41,6 +43,14 @@ public class TblAzureConsumer implements Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
+    public String getIntegrationKey() {
+        return integrationKey;
+    }
+
+    public void setIntegrationKey(String messageID) {
+        this.integrationKey = integrationKey;
+    }
+
     public String getMessage() {
         return message;
     }
@@ -57,9 +67,10 @@ public class TblAzureConsumer implements Serializable {
         this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
     }
 
-    public TblAzureConsumer(@NotNull @Size(min = 1, max = 200) String messageID, @NotNull long sequenceNumber, String message, Integer frontOfficeSystemRecordID) {
+    public TblAzureConsumer(@NotNull @Size(min = 1, max = 200) String messageID, @NotNull long sequenceNumber, String integrationKey, String message, Integer frontOfficeSystemRecordID) {
         this.messageID = messageID;
         this.sequenceNumber = sequenceNumber;
+        this.integrationKey = integrationKey;
         this.message = message;
         this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
     }

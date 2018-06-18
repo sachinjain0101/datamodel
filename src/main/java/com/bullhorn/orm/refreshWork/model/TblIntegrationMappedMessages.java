@@ -24,19 +24,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "tblIntegration_MappedMessages", schema = "dbo")
-@XmlRootElement
-@NamedQueries({
-        @NamedQuery(name = "TblIntegrationMappedMessages.findAll", query = "SELECT t FROM TblIntegrationMappedMessages t")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByRecordId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.recordId = :recordId")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByClient", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.client = :client")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByIntegrationKey", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.integrationKey = :integrationKey")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByFrontOfficeSystemRecordID", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.frontOfficeSystemRecordID = :frontOfficeSystemRecordID")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMessageId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.messageId = :messageId")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findBySequenceNumber", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.sequenceNumber = :sequenceNumber")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByStatus", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.status = :status")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMapName", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.mapName = :mapName")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByNoOfAssignments", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.noOfAssignments = :noOfAssignments")
-        , @NamedQuery(name = "TblIntegrationMappedMessages.findByCreatedDateTime", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.createdDateTime = :createdDateTime")})
+//@XmlRootElement
+//@NamedQueries({
+//        @NamedQuery(name = "TblIntegrationMappedMessages.findAll", query = "SELECT t FROM TblIntegrationMappedMessages t")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByRecordId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.recordId = :recordId")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByClient", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.client = :client")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByIntegrationKey", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.integrationKey = :integrationKey")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByFrontOfficeSystemRecordID", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.frontOfficeSystemRecordID = :frontOfficeSystemRecordID")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMessageId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.messageId = :messageId")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findBySequenceNumber", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.sequenceNumber = :sequenceNumber")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByStatus", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.status = :status")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMapName", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.mapName = :mapName")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByNoOfAssignments", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.noOfAssignments = :noOfAssignments")
+//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByCreatedDateTime", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.createdDateTime = :createdDateTime")})
 public class TblIntegrationMappedMessages implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -65,9 +65,6 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Column(name = "SequenceNumber")
     private long sequenceNumber;
     @Size(max = 50)
-    @Column(name = "Status")
-    private String status;
-    @Size(max = 50)
     @Column(name = "MapName")
     private String mapName;
     @Column(name = "Message")
@@ -77,6 +74,8 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Column(name = "CreatedDateTime")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDateTime;
+    @Column(name = "Processed")
+    private Integer processed;
 
     public TblIntegrationMappedMessages() {
     }
@@ -140,12 +139,12 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
-    public String getStatus() {
-        return status;
+    public Integer getProcessed() {
+        return processed;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setProcessed(Integer processed) {
+        this.processed = processed;
     }
 
     public String getMapName() {

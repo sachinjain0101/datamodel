@@ -29,13 +29,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "tblIntegration_ClientStatus")
-@XmlRootElement
-@NamedQueries({
-        @NamedQuery(name = "TblIntegrationClientStatus.findAll", query = "SELECT t FROM TblIntegrationClientStatus t")
-        , @NamedQuery(name = "TblIntegrationClientStatus.findByRecordId", query = "SELECT t FROM TblIntegrationClientStatus t WHERE t.recordId = :recordId")
-        , @NamedQuery(name = "TblIntegrationClientStatus.findByCode", query = "SELECT t FROM TblIntegrationClientStatus t WHERE t.code = :code")
-        , @NamedQuery(name = "TblIntegrationClientStatus.findByDescription", query = "SELECT t FROM TblIntegrationClientStatus t WHERE t.description = :description")
-        , @NamedQuery(name = "TblIntegrationClientStatus.findByRecordStatus", query = "SELECT t FROM TblIntegrationClientStatus t WHERE t.recordStatus = :recordStatus")})
 public class TblIntegrationClientStatus implements Serializable {
 
     private static final long serialVersionUID = 1L;

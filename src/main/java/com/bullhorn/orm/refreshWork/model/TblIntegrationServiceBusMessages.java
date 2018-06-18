@@ -45,10 +45,16 @@ public class TblIntegrationServiceBusMessages implements Serializable {
     @NotNull
     @Column(name = "SequenceNumber")
     private long sequenceNumber;
+    @Column(name = "IntegrationKey")
+    private String integrationKey;
     @Column(name = "Message")
     private String message;
     @Column(name = "FrontOfficeSystemRecordID")
     private Integer frontOfficeSystemRecordID;
+    @Column(name = "Processed")
+    private Integer processed;
+    @Column(name = "ErrorDescription")
+    private String errorDescription;
 
     public TblIntegrationServiceBusMessages() {
     }
@@ -87,6 +93,14 @@ public class TblIntegrationServiceBusMessages implements Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
+    public String getIntegrationKey() {
+        return integrationKey;
+    }
+
+    public void setIntegrationKey(String messageID) {
+        this.integrationKey = integrationKey;
+    }
+
     public String getMessage() {
         return message;
     }
@@ -103,9 +117,26 @@ public class TblIntegrationServiceBusMessages implements Serializable {
         this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
     }
 
-    public TblIntegrationServiceBusMessages(@NotNull @Size(min = 1, max = 200) String messageID, @NotNull long sequenceNumber, String message, Integer frontOfficeSystemRecordID) {
+    public Integer getProcessed() {
+        return processed;
+    }
+
+    public void setProcessed(Integer processed) {
+        this.processed = processed;
+    }
+
+    public String getErrorDescription() {
+        return errorDescription;
+    }
+
+    public void setErrorDescription(String errorDescription) {
+        this.errorDescription = errorDescription;
+    }
+
+    public TblIntegrationServiceBusMessages(@NotNull @Size(min = 1, max = 200) String messageID, @NotNull long sequenceNumber, String integrationKey, String message, Integer frontOfficeSystemRecordID) {
         this.messageID = messageID;
         this.sequenceNumber = sequenceNumber;
+        this.integrationKey = integrationKey;
         this.message = message;
         this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
     }

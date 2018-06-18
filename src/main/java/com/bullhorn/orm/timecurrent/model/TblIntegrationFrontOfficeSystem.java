@@ -30,14 +30,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "tblIntegration_FrontOfficeSystem")
-@XmlRootElement
-@NamedQueries({
-        @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findAll", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t")
-        , @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findByRecordId", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t WHERE t.recordId = :recordId")
-        , @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findByName", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t WHERE t.name = :name")
-        , @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findByDescription", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t WHERE t.description = :description")
-        , @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findByVersionNumber", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t WHERE t.versionNumber = :versionNumber")
-        , @NamedQuery(name = "TblIntegrationFrontOfficeSystem.findByRecordStatus", query = "SELECT t FROM TblIntegrationFrontOfficeSystem t WHERE t.recordStatus = :recordStatus")})
 public class TblIntegrationFrontOfficeSystem implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -31,29 +31,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "tblIntegration_Client")
-@XmlRootElement
-@NamedQueries({
-        @NamedQuery(name = "TblIntegrationClient.findAll", query = "SELECT t FROM TblIntegrationClient t")
-        , @NamedQuery(name = "TblIntegrationClient.findByRecordId", query = "SELECT t FROM TblIntegrationClient t WHERE t.recordId = :recordId")
-        , @NamedQuery(name = "TblIntegrationClient.findByIntegrationKey", query = "SELECT t FROM TblIntegrationClient t WHERE t.integrationKey = :integrationKey")
-        , @NamedQuery(name = "TblIntegrationClient.findByClient", query = "SELECT t FROM TblIntegrationClient t WHERE t.client = :client")
-        , @NamedQuery(name = "TblIntegrationClient.findByIsMapped", query = "SELECT t FROM TblIntegrationClient t WHERE t.isMapped = :isMapped")
-        , @NamedQuery(name = "TblIntegrationClient.findByMap", query = "SELECT t FROM TblIntegrationClient t WHERE t.map = :map")
-        , @NamedQuery(name = "TblIntegrationClient.findByIsEmailSent", query = "SELECT t FROM TblIntegrationClient t WHERE t.isEmailSent = :isEmailSent")
-        , @NamedQuery(name = "TblIntegrationClient.findByEnvironment", query = "SELECT t FROM TblIntegrationClient t WHERE t.environment = :environment")
-        , @NamedQuery(name = "TblIntegrationClient.findByAssignmentLastReceivedDate", query = "SELECT t FROM TblIntegrationClient t WHERE t.assignmentLastReceivedDate = :assignmentLastReceivedDate")
-        , @NamedQuery(name = "TblIntegrationClient.findByCreatedBy", query = "SELECT t FROM TblIntegrationClient t WHERE t.createdBy = :createdBy")
-        , @NamedQuery(name = "TblIntegrationClient.findByMaintUserName", query = "SELECT t FROM TblIntegrationClient t WHERE t.maintUserName = :maintUserName")
-        , @NamedQuery(name = "TblIntegrationClient.findByCreateDateTime", query = "SELECT t FROM TblIntegrationClient t WHERE t.createDateTime = :createDateTime")
-        , @NamedQuery(name = "TblIntegrationClient.findByMaintDateTime", query = "SELECT t FROM TblIntegrationClient t WHERE t.maintDateTime = :maintDateTime")
-        , @NamedQuery(name = "TblIntegrationClient.findByRecordStatus", query = "SELECT t FROM TblIntegrationClient t WHERE t.recordStatus = :recordStatus")
-        , @NamedQuery(name = "TblIntegrationClient.findByExternalApiUserId", query = "SELECT t FROM TblIntegrationClient t WHERE t.externalApiUserId = :externalApiUserId")
-        , @NamedQuery(name = "TblIntegrationClient.findByExternalApiPassword", query = "SELECT t FROM TblIntegrationClient t WHERE t.externalApiPassword = :externalApiPassword")
-        , @NamedQuery(name = "TblIntegrationClient.findByPayFileIntegrated", query = "SELECT t FROM TblIntegrationClient t WHERE t.payFileIntegrated = :payFileIntegrated")
-        , @NamedQuery(name = "TblIntegrationClient.findByCheckEmplDups", query = "SELECT t FROM TblIntegrationClient t WHERE t.checkEmplDups = :checkEmplDups")
-        , @NamedQuery(name = "TblIntegrationClient.findByAllowEmptyDept", query = "SELECT t FROM TblIntegrationClient t WHERE t.allowEmptyDept = :allowEmptyDept")
-        , @NamedQuery(name = "TblIntegrationClient.findByPayfileSendIndividualJSON", query = "SELECT t FROM TblIntegrationClient t WHERE t.payfileSendIndividualJSON = :payfileSendIndividualJSON")
-        , @NamedQuery(name = "TblIntegrationClient.findByGetAllAssignments", query = "SELECT t FROM TblIntegrationClient t WHERE t.getAllAssignments = :getAllAssignments")})
 public class TblIntegrationClient implements Serializable {
 
     private static final long serialVersionUID = 1L;
