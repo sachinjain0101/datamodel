@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "tblIntegration_ValidatedMessages")
 public class TblIntegrationValidatedMessages implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final Long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -58,10 +58,9 @@ public class TblIntegrationValidatedMessages implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "SequenceNumber")
-    private long sequenceNumber;
+    private Long sequenceNumber;
     @Column(name = "Processed")
     private Integer processed;
-    @Lob
     @Column(name = "ErrorDescription")
     private String errorDescription;
     @Column(name = "Message")
@@ -71,7 +70,7 @@ public class TblIntegrationValidatedMessages implements Serializable {
     @Column(name = "ClientRecordID")
     private Integer clientRecordID;
     @Column(name = "ServiceBusMessagesRecordID")
-    private long serviceBusMessagesRecordID;
+    private Long serviceBusMessagesRecordID;
     @Column(name = "CreatedDateTime")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDateTime;
@@ -83,7 +82,7 @@ public class TblIntegrationValidatedMessages implements Serializable {
         this.recordId = recordId;
     }
 
-    public TblIntegrationValidatedMessages(Long recordId, String integrationKey, String messageId, long sequenceNumber) {
+    public TblIntegrationValidatedMessages(Long recordId, String integrationKey, String messageId, Long sequenceNumber) {
         this.recordId = recordId;
         this.integrationKey = integrationKey;
         this.messageId = messageId;
@@ -138,11 +137,11 @@ public class TblIntegrationValidatedMessages implements Serializable {
         this.messageId = messageId;
     }
 
-    public long getSequenceNumber() {
+    public Long getSequenceNumber() {
         return sequenceNumber;
     }
 
-    public void setSequenceNumber(long sequenceNumber) {
+    public void setSequenceNumber(Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
     }
 
@@ -186,11 +185,11 @@ public class TblIntegrationValidatedMessages implements Serializable {
         this.clientRecordID = clientRecordID;
     }
 
-    public long getServiceBusMessagesRecordID() {
+    public Long getServiceBusMessagesRecordID() {
         return serviceBusMessagesRecordID;
     }
 
-    public void setServiceBusMessagesRecordID(long serviceBusMessagesRecordID) {
+    public void setServiceBusMessagesRecordID(Long serviceBusMessagesRecordID) {
         this.serviceBusMessagesRecordID = serviceBusMessagesRecordID;
     }
 

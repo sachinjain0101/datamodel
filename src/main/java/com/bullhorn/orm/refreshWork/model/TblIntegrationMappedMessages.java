@@ -1,24 +1,11 @@
 package com.bullhorn.orm.refreshWork.model;
 
 
-import java.io.Serializable;
-import java.math.BigInteger;
-import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
@@ -28,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "tblIntegration_MappedMessages")
 public class TblIntegrationMappedMessages implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final Long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -50,14 +37,14 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "SequenceNumber")
-    private long sequenceNumber;
+    private Long sequenceNumber;
     @Column(name = "Processed")
     private Integer processed;
     @Column(name = "ErrorDescription")
     private String errorDescription;
     @Size(max = 50)
-    @Column(name = "MapName")
-    private String mapName;
+    @Column(name = "Map")
+    private String map;
     @Column(name = "Message")
     private String message;
     @Column(name = "MappedMessage")
@@ -69,9 +56,9 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Column(name = "ClientRecordID")
     private Integer clientRecordID;
     @Column(name = "ServiceBusMessagesRecordID")
-    private BigInteger serviceBusMessagesRecordID;
+    private Long serviceBusMessagesRecordID;
     @Column(name = "ValidatedMessagesRecordID")
-    private BigInteger validatedMessagesRecordID;
+    private Long validatedMessagesRecordID;
     @Column(name = "CreatedDateTime")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDateTime;
@@ -83,7 +70,7 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.recordId = recordId;
     }
 
-    public TblIntegrationMappedMessages(Long recordId, String integrationKey, String messageId, long sequenceNumber) {
+    public TblIntegrationMappedMessages(Long recordId, String integrationKey, String messageId, Long sequenceNumber) {
         this.recordId = recordId;
         this.integrationKey = integrationKey;
         this.messageId = messageId;
@@ -122,11 +109,11 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.messageId = messageId;
     }
 
-    public long getSequenceNumber() {
+    public Long getSequenceNumber() {
         return sequenceNumber;
     }
 
-    public void setSequenceNumber(long sequenceNumber) {
+    public void setSequenceNumber(Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
     }
 
@@ -146,12 +133,12 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.errorDescription = errorDescription;
     }
 
-    public String getMapName() {
-        return mapName;
+    public String getMap() {
+        return map;
     }
 
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
+    public void setMap(String map) {
+        this.map = map;
     }
 
     public String getMessage() {
@@ -194,19 +181,19 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.clientRecordID = clientRecordID;
     }
 
-    public BigInteger getServiceBusMessagesRecordID() {
+    public Long getServiceBusMessagesRecordID() {
         return serviceBusMessagesRecordID;
     }
 
-    public void setServiceBusMessagesRecordID(BigInteger serviceBusMessagesRecordID) {
+    public void setServiceBusMessagesRecordID(Long serviceBusMessagesRecordID) {
         this.serviceBusMessagesRecordID = serviceBusMessagesRecordID;
     }
 
-    public BigInteger getValidatedMessagesRecordID() {
+    public Long getValidatedMessagesRecordID() {
         return validatedMessagesRecordID;
     }
 
-    public void setValidatedMessagesRecordID(BigInteger validatedMessagesRecordID) {
+    public void setValidatedMessagesRecordID(Long validatedMessagesRecordID) {
         this.validatedMessagesRecordID = validatedMessagesRecordID;
     }
 

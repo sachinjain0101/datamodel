@@ -48,7 +48,7 @@ CREATE TABLE RefreshWork.dbo.tblIntegration_MappedMessages (
 	SequenceNumber bigint NOT NULL,
 	Processed int,
 	ErrorDescription varchar(max),
-	MapName nvarchar(50),
+	Map varchar(50),
 	Message varchar(max),
 	MappedMessage varchar(max),
 	NoOfAssignments int DEFAULT ((0)),
