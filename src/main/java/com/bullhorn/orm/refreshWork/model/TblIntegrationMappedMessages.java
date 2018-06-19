@@ -43,8 +43,8 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Column(name = "ErrorDescription")
     private String errorDescription;
     @Size(max = 50)
-    @Column(name = "Map")
-    private String map;
+    @Column(name = "MapName")
+    private String mapName;
     @Column(name = "Message")
     private String message;
     @Column(name = "MappedMessage")
@@ -133,12 +133,12 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.errorDescription = errorDescription;
     }
 
-    public String getMap() {
-        return map;
+    public String getMapName() {
+        return mapName;
     }
 
-    public void setMap(String map) {
-        this.map = map;
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     public String getMessage() {

@@ -46,8 +46,8 @@ public class TblIntegrationValidatedMessages implements Serializable {
     @Column(name = "IntegrationKey")
     private String integrationKey;
     @Size(max = 50)
-    @Column(name = "Map")
-    private String map;
+    @Column(name = "MapName")
+    private String mapName;
     @Column(name = "IsMapped")
     private Boolean isMapped;
     @Basic(optional = false)
@@ -113,12 +113,12 @@ public class TblIntegrationValidatedMessages implements Serializable {
         this.integrationKey = integrationKey;
     }
 
-    public String getMap() {
-        return map;
+    public String getMapName() {
+        return mapName;
     }
 
-    public void setMap(String map) {
-        this.map = map;
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     public Boolean getIsMapped() {

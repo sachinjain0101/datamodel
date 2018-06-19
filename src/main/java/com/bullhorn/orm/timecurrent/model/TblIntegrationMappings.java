@@ -17,7 +17,7 @@ import java.util.Date;
  * @author sachin.jain
  */
 @Entity
-@Table(name = "tblIntegration_Mappings")
+@Table(name = "tblIntegration_Mappings", schema = "dbo")
 public class TblIntegrationMappings implements Serializable {
 
     private static final long serialVersionUID = 1L;

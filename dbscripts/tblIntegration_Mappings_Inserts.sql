@@ -1,3 +1,5 @@
+SET IDENTITY_INSERT TimeCurrent.dbo.tblIntegration_Mappings ON
+
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (1, 'Avionte', 'IntegrationKey', '', 1, 'sachin.jain', '2017-12-22 00:10:05.217');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (2, 'Avionte', 'MessageID', '', 1, 'sachin.jain', '2017-12-22 00:10:05.230');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (3, 'Avionte', 'JobID', '', 1, 'sachin.jain', '2017-12-22 00:10:05.230');

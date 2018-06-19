@@ -20,7 +20,7 @@ CREATE TABLE RefreshWork.dbo.tblIntegration_ValidatedMessages (
 	RecordId bigint NOT NULL IDENTITY(1,1),
 	Client nvarchar(10),
 	IntegrationKey nvarchar(50) NOT NULL,
-	Map varchar(50),
+	MapName varchar(50),
 	IsMapped bit,
 	MessageId nvarchar(200) NOT NULL,
 	SequenceNumber bigint NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE RefreshWork.dbo.tblIntegration_MappedMessages (
 	SequenceNumber bigint NOT NULL,
 	Processed int,
 	ErrorDescription varchar(max),
-	Map varchar(50),
+	MapName varchar(50),
 	Message varchar(max),
 	MappedMessage varchar(max),
 	NoOfAssignments int DEFAULT ((0)),
@@ -62,4 +62,18 @@ CREATE TABLE RefreshWork.dbo.tblIntegration_MappedMessages (
 CREATE INDEX tblIntegration_MappedMessages_idx1 ON RefreshWork.dbo.tblIntegration_MappedMessages (MessageID,SequenceNumber,Client, IntegrationKey)
 CREATE INDEX tblIntegration_MappedMessages_idx2 ON RefreshWork.dbo.tblIntegration_MappedMessages (ValidatedMessagesRecordID)
 CREATE INDEX tblIntegration_MappedMessages_idx3 ON RefreshWork.dbo.tblIntegration_MappedMessages (FrontOfficeSystemRecordID,ClientRecordID,ServiceBusMessagesRecordID,ValidatedMessagesRecordID)
+
+
+DROP TABLE TimeCurrent.dbo.tblIntegration_Mappings
+CREATE TABLE TimeCurrent.dbo.tblIntegration_Mappings(
+	RecordID int NOT NULL IDENTITY(1,1),
+	MapName varchar(20) NOT NULL,
+	Attribute varchar(20) NOT NULL,
+	Expression varchar(500) NULL,
+	Version int NOT NULL,
+	CreatedBy varchar(100) NULL,
+	CreateDateTime datetime NULL,
+	CONSTRAINT PK_tblIntegration_Mappings PRIMARY KEY (RecordId)
+)
+CREATE INDEX tblIntegration_Mappings_idx1 ON TimeCurrent.dbo.tblIntegration_Mappings (MapName)
 
