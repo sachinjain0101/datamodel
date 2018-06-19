@@ -35,7 +35,7 @@ public class TblIntegrationServiceBusMessages implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "RecordID")
-    private Long recordID;
+    private Long recordId;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
@@ -60,21 +60,21 @@ public class TblIntegrationServiceBusMessages implements Serializable {
     }
 
     public TblIntegrationServiceBusMessages(Long recordID) {
-        this.recordID = recordID;
+        this.recordId = recordID;
     }
 
     public TblIntegrationServiceBusMessages(Long recordID, String messageID, long sequenceNumber) {
-        this.recordID = recordID;
+        this.recordId = recordID;
         this.messageID = messageID;
         this.sequenceNumber = sequenceNumber;
     }
 
     public Long getRecordID() {
-        return recordID;
+        return recordId;
     }
 
-    public void setRecordID(Long recordID) {
-        this.recordID = recordID;
+    public void setRecordID(Long recordId) {
+        this.recordId = recordId;
     }
 
     public String getMessageID() {
@@ -144,7 +144,7 @@ public class TblIntegrationServiceBusMessages implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (recordID != null ? recordID.hashCode() : 0);
+        hash += (recordId != null ? recordId.hashCode() : 0);
         return hash;
     }
 
@@ -155,7 +155,7 @@ public class TblIntegrationServiceBusMessages implements Serializable {
             return false;
         }
         TblIntegrationServiceBusMessages other = (TblIntegrationServiceBusMessages) object;
-        if ((this.recordID == null && other.recordID != null) || (this.recordID != null && !this.recordID.equals(other.recordID))) {
+        if ((this.recordId == null && other.recordId != null) || (this.recordId != null && !this.recordId.equals(other.recordId))) {
             return false;
         }
         return true;
@@ -163,7 +163,7 @@ public class TblIntegrationServiceBusMessages implements Serializable {
 
     @Override
     public String toString() {
-        return "com.bullhorn.orm.refreshwork.model.TblIntegrationServiceBusMessages[ recordID=" + recordID + " ]";
+        return "com.bullhorn.orm.refreshwork.model.TblIntegrationServiceBusMessages[ recordID=" + recordId + " ]";
     }
 
 }
