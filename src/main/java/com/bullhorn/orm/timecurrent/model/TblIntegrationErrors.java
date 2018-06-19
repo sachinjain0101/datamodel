@@ -146,18 +146,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "tblIntegration_Errors")
-@XmlRootElement
-@NamedQueries({
-        @NamedQuery(name = "TblIntegrationErrors.findAll", query = "SELECT t FROM TblIntegrationErrors t")
-        , @NamedQuery(name = "TblIntegrationErrors.findByRecordId", query = "SELECT t FROM TblIntegrationErrors t WHERE t.recordId = :recordId")
-        , @NamedQuery(name = "TblIntegrationErrors.findByIntegrationKey", query = "SELECT t FROM TblIntegrationErrors t WHERE t.integrationKey = :integrationKey")
-        , @NamedQuery(name = "TblIntegrationErrors.findByClient", query = "SELECT t FROM TblIntegrationErrors t WHERE t.client = :client")
-        , @NamedQuery(name = "TblIntegrationErrors.findByFrontOfficeSystemRecordId", query = "SELECT t FROM TblIntegrationErrors t WHERE t.frontOfficeSystemRecordId = :frontOfficeSystemRecordId")
-        , @NamedQuery(name = "TblIntegrationErrors.findByProcessName", query = "SELECT t FROM TblIntegrationErrors t WHERE t.processName = :processName")
-        , @NamedQuery(name = "TblIntegrationErrors.findByMessageId", query = "SELECT t FROM TblIntegrationErrors t WHERE t.messageId = :messageId")
-        , @NamedQuery(name = "TblIntegrationErrors.findByErrorSource", query = "SELECT t FROM TblIntegrationErrors t WHERE t.errorSource = :errorSource")
-        , @NamedQuery(name = "TblIntegrationErrors.findByErrorCode", query = "SELECT t FROM TblIntegrationErrors t WHERE t.errorCode = :errorCode")
-        , @NamedQuery(name = "TblIntegrationErrors.findByCreateDateTime", query = "SELECT t FROM TblIntegrationErrors t WHERE t.createDateTime = :createDateTime")})
 public class TblIntegrationErrors implements Serializable {
 
     private static final long serialVersionUID = 1L;

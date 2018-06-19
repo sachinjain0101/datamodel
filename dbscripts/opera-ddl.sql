@@ -42,19 +42,24 @@ CREATE INDEX tblIntegration_ValidatedMessages_idx3 ON RefreshWork.dbo.tblIntegra
 DROP TABLE RefreshWork.dbo.tblIntegration_MappedMessages
 CREATE TABLE RefreshWork.dbo.tblIntegration_MappedMessages (
 	RecordId bigint NOT NULL IDENTITY(1,1),
-	ValidatedMessagesRecordID bigint,
 	Client nvarchar(10),
 	IntegrationKey nvarchar(50) NOT NULL,
-	FrontOfficeSystemRecordID int,
 	MessageId nvarchar(200) NOT NULL,
 	SequenceNumber bigint NOT NULL,
 	Processed int,
+	ErrorDescription varchar(max),
 	MapName nvarchar(50),
 	Message varchar(max),
+	MappedMessage varchar(max),
 	NoOfAssignments int DEFAULT ((0)),
+	FrontOfficeSystemRecordID int,
+	ClientRecordID int,
+	ServiceBusMessagesRecordID bigint,
+	ValidatedMessagesRecordID bigint,
 	CreatedDateTime datetime DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT PK_tblIntegration_MappedMessages PRIMARY KEY (RecordId)
 )
 CREATE INDEX tblIntegration_MappedMessages_idx1 ON RefreshWork.dbo.tblIntegration_MappedMessages (MessageID,SequenceNumber,Client, IntegrationKey)
 CREATE INDEX tblIntegration_MappedMessages_idx2 ON RefreshWork.dbo.tblIntegration_MappedMessages (ValidatedMessagesRecordID)
+CREATE INDEX tblIntegration_MappedMessages_idx3 ON RefreshWork.dbo.tblIntegration_MappedMessages (FrontOfficeSystemRecordID,ClientRecordID,ServiceBusMessagesRecordID,ValidatedMessagesRecordID)
 

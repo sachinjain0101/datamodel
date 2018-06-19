@@ -2,6 +2,7 @@ package com.bullhorn.orm.refreshWork.model;
 
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -23,20 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author sachin.jain
  */
 @Entity
-@Table(name = "tblIntegration_MappedMessages", schema = "dbo")
-//@XmlRootElement
-//@NamedQueries({
-//        @NamedQuery(name = "TblIntegrationMappedMessages.findAll", query = "SELECT t FROM TblIntegrationMappedMessages t")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByRecordId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.recordId = :recordId")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByClient", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.client = :client")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByIntegrationKey", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.integrationKey = :integrationKey")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByFrontOfficeSystemRecordID", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.frontOfficeSystemRecordID = :frontOfficeSystemRecordID")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMessageId", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.messageId = :messageId")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findBySequenceNumber", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.sequenceNumber = :sequenceNumber")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByStatus", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.status = :status")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByMapName", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.mapName = :mapName")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByNoOfAssignments", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.noOfAssignments = :noOfAssignments")
-//        , @NamedQuery(name = "TblIntegrationMappedMessages.findByCreatedDateTime", query = "SELECT t FROM TblIntegrationMappedMessages t WHERE t.createdDateTime = :createdDateTime")})
+@Table(name = "tblIntegration_MappedMessages")
 public class TblIntegrationMappedMessages implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -53,8 +42,6 @@ public class TblIntegrationMappedMessages implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "IntegrationKey")
     private String integrationKey;
-    @Column(name = "FrontOfficeSystemRecordID")
-    private Integer frontOfficeSystemRecordID;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
@@ -64,18 +51,30 @@ public class TblIntegrationMappedMessages implements Serializable {
     @NotNull
     @Column(name = "SequenceNumber")
     private long sequenceNumber;
+    @Column(name = "Processed")
+    private Integer processed;
+    @Column(name = "ErrorDescription")
+    private String errorDescription;
     @Size(max = 50)
     @Column(name = "MapName")
     private String mapName;
     @Column(name = "Message")
     private String message;
+    @Column(name = "MappedMessage")
+    private String mappedMessage;
     @Column(name = "NoOfAssignments")
     private Integer noOfAssignments;
+    @Column(name = "FrontOfficeSystemRecordID")
+    private Integer frontOfficeSystemRecordID;
+    @Column(name = "ClientRecordID")
+    private Integer clientRecordID;
+    @Column(name = "ServiceBusMessagesRecordID")
+    private BigInteger serviceBusMessagesRecordID;
+    @Column(name = "ValidatedMessagesRecordID")
+    private BigInteger validatedMessagesRecordID;
     @Column(name = "CreatedDateTime")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDateTime;
-    @Column(name = "Processed")
-    private Integer processed;
 
     public TblIntegrationMappedMessages() {
     }
@@ -115,14 +114,6 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.integrationKey = integrationKey;
     }
 
-    public Integer getFrontOfficeSystemRecordID() {
-        return frontOfficeSystemRecordID;
-    }
-
-    public void setFrontOfficeSystemRecordID(Integer frontOfficeSystemRecordID) {
-        this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
-    }
-
     public String getMessageId() {
         return messageId;
     }
@@ -147,6 +138,14 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.processed = processed;
     }
 
+    public String getErrorDescription() {
+        return errorDescription;
+    }
+
+    public void setErrorDescription(String errorDescription) {
+        this.errorDescription = errorDescription;
+    }
+
     public String getMapName() {
         return mapName;
     }
@@ -163,12 +162,52 @@ public class TblIntegrationMappedMessages implements Serializable {
         this.message = message;
     }
 
+    public String getMappedMessage() {
+        return mappedMessage;
+    }
+
+    public void setMappedMessage(String mappedMessage) {
+        this.mappedMessage = mappedMessage;
+    }
+
     public Integer getNoOfAssignments() {
         return noOfAssignments;
     }
 
     public void setNoOfAssignments(Integer noOfAssignments) {
         this.noOfAssignments = noOfAssignments;
+    }
+
+    public Integer getFrontOfficeSystemRecordID() {
+        return frontOfficeSystemRecordID;
+    }
+
+    public void setFrontOfficeSystemRecordID(Integer frontOfficeSystemRecordID) {
+        this.frontOfficeSystemRecordID = frontOfficeSystemRecordID;
+    }
+
+    public Integer getClientRecordID() {
+        return clientRecordID;
+    }
+
+    public void setClientRecordID(Integer clientRecordID) {
+        this.clientRecordID = clientRecordID;
+    }
+
+    public BigInteger getServiceBusMessagesRecordID() {
+        return serviceBusMessagesRecordID;
+    }
+
+    public void setServiceBusMessagesRecordID(BigInteger serviceBusMessagesRecordID) {
+        this.serviceBusMessagesRecordID = serviceBusMessagesRecordID;
+    }
+
+    public BigInteger getValidatedMessagesRecordID() {
+        return validatedMessagesRecordID;
+    }
+
+    public void setValidatedMessagesRecordID(BigInteger validatedMessagesRecordID) {
+        this.validatedMessagesRecordID = validatedMessagesRecordID;
     }
 
     public Date getCreatedDateTime() {
