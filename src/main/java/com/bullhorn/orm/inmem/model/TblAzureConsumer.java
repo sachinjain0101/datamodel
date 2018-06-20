@@ -22,7 +22,7 @@ public class TblAzureConsumer implements Serializable {
     @Column(name = "IntegrationKey")
     private String integrationKey;
     @Lob
-    @Column(name = "Message", length=5000000)
+    @Column(name = "Message", length=500000000)
     private String message;
     @Column(name = "FrontOfficeSystemRecordID")
     private Integer frontOfficeSystemRecordID;
