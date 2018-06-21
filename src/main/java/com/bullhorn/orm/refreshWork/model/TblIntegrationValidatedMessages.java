@@ -59,8 +59,8 @@ public class TblIntegrationValidatedMessages implements Serializable {
     @NotNull
     @Column(name = "SequenceNumber")
     private Long sequenceNumber;
-    @Column(name = "Processed")
-    private Integer processed;
+    @Column(name = "Status")
+    private String status;
     @Column(name = "ErrorDescription")
     private String errorDescription;
     @Column(name = "Message")
@@ -145,12 +145,12 @@ public class TblIntegrationValidatedMessages implements Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
-    public Integer getProcessed() {
-        return processed;
+    public String getStatus() {
+        return status;
     }
 
-    public void setProcessed(Integer processed) {
-        this.processed = processed;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getErrorDescription() {
