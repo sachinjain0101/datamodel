@@ -77,3 +77,14 @@ CREATE TABLE TimeCurrent.dbo.tblIntegration_Mappings(
 )
 CREATE INDEX tblIntegration_Mappings_idx1 ON TimeCurrent.dbo.tblIntegration_Mappings (MapName)
 
+DROP TABLE TimeCurrent.dbo.tblIntegration_Config
+CREATE TABLE TimeCurrent.dbo.tblIntegration_Config(
+	RecordID int NOT NULL IDENTITY(1,1),
+	CfgKey varchar(100) NOT NULL,
+	CfgValue varchar(max),
+	CONSTRAINT PK_tblIntegration_Config PRIMARY KEY (RecordId)
+)
+CREATE UNIQUE INDEX tbltblIntegration_Config_uidx ON TimeCurrent.dbo.tblIntegration_Config (CfgKey)
+
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('ASSIGNMENT_PROCESSOR_REST_URL','http://dev1app1/PeoplenetIntegration/api/Assignment');
+

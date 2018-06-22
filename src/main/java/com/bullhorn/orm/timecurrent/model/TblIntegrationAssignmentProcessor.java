@@ -37,15 +37,12 @@ public class TblIntegrationAssignmentProcessor implements Serializable {
     @Size(max = 100)
     @Column(name = "MessageId")
     private String messageId;
-    @Lob
     @Column(name = "FilePath")
     private String filePath;
     @Basic(optional = false)
     @NotNull
-    @Lob
     @Column(name = "FileName")
     private String fileName;
-    @Lob
     @Column(name = "MapName")
     private String mapName;
     @Size(max = 10)
@@ -89,20 +86,6 @@ public class TblIntegrationAssignmentProcessor implements Serializable {
     @Column(name = "StatusEndTime")
     @Temporal(TemporalType.TIMESTAMP)
     private Date statusEndTime;
-
-    @Column(name = "SourceJson")
-    private String sourceJson;
-    @Column(name = "TargetJson")
-    private String targetJson;
-
-
-    @Column(name = "SourceJsonCreationTime")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date sourceJsonCreationTime;
-
-    @Column(name = "TargetJsonCreationTime")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date targetJsonCreationTime;
 
     public TblIntegrationAssignmentProcessor() {
     }
@@ -285,37 +268,6 @@ public class TblIntegrationAssignmentProcessor implements Serializable {
         this.statusEndTime = statusEndTime;
     }
 
-    public String getSourceJson() {
-        return sourceJson;
-    }
-
-    public void setSourceJson(String sourceJson) {
-        this.sourceJson = sourceJson;
-    }
-
-    public String getTargetJson() {
-        return targetJson;
-    }
-
-    public void setTargetJson(String targetJson) {
-        this.targetJson = targetJson;
-    }
-
-    public Date getSourceJsonCreationTime() {
-        return sourceJsonCreationTime;
-    }
-
-    public void setSourceJsonCreationTime(Date sourceJsonCreationTime) {
-        this.sourceJsonCreationTime = sourceJsonCreationTime;
-    }
-
-    public Date getTargetJsonCreationTime() {
-        return targetJsonCreationTime;
-    }
-
-    public void setTargetJsonCreationTime(Date targetJsonCreationTime) {
-        this.targetJsonCreationTime = targetJsonCreationTime;
-    }
 
     @Override
     public int hashCode() {
