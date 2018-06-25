@@ -8,16 +8,11 @@ package com.bullhorn.orm.timecurrent.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- *
- * @author sachin.jain
- */
 @Entity
-@Table(name = "tblIntegration_AssignmentProcessor")
+@Table(name = "tblIntegration_AssignmentProcessor", schema = "dbo")
 public class TblIntegrationAssignmentProcessor implements Serializable {
 
     private static final long serialVersionUID = 1L;

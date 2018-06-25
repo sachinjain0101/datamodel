@@ -87,4 +87,10 @@ CREATE TABLE TimeCurrent.dbo.tblIntegration_Config(
 CREATE UNIQUE INDEX tbltblIntegration_Config_uidx ON TimeCurrent.dbo.tblIntegration_Config (CfgKey)
 
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('ASSIGNMENT_PROCESSOR_REST_URL','http://dev1app1/PeoplenetIntegration/api/Assignment');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('AZURE_CONSUMER_POOL_SIZE','1');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('AZURE_CONSUMER_QUEUE_NAME','sachin-new-test');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_SWAPPER_POOL_SIZE','1');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_SWAPPER_EXECUTE_INTERVAL','5000');
+
+
 
