@@ -91,6 +91,17 @@ INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('AZU
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('AZURE_CONSUMER_QUEUE_NAME','sachin-new-test');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_SWAPPER_POOL_SIZE','1');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_SWAPPER_EXECUTE_INTERVAL','5000');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_VALIDATOR_POOL_SIZE','1');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_VALIDATOR_EXECUTE_INTERVAL','5000');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_MAPPER_POOL_SIZE','1');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_MAPPER_EXECUTE_INTERVAL','5000');
+
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('CLUSTER_1','1');
+
+
+
+
+
 
 
 
