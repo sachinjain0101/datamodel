@@ -96,7 +96,7 @@ INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DAT
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_MAPPER_POOL_SIZE','1');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('DATA_MAPPER_EXECUTE_INTERVAL','5000');
 
-INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('CLUSTER_1','1');
+INSERT INTO TimeCurrent.dbo.tblIntegration_Config (CfgKey,CfgValue) Values ('THREADPOOL_SCHEDULER_TERMINATION_TIME_INSECONDS','60');
 
 
 
