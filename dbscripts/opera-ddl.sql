@@ -67,15 +67,16 @@ CREATE INDEX tblIntegration_MappedMessages_idx3 ON RefreshWork.dbo.tblIntegratio
 DROP TABLE TimeCurrent.dbo.tblIntegration_Mappings
 CREATE TABLE TimeCurrent.dbo.tblIntegration_Mappings(
 	RecordID int NOT NULL IDENTITY(1,1),
-	MapName varchar(20) NOT NULL,
-	Attribute varchar(20) NOT NULL,
-	Expression varchar(500) NULL,
+	MapName varchar(50) NOT NULL,
+	Attribute varchar(50) NOT NULL,
+	Expression varchar(1000) NULL,
 	Version int NOT NULL,
 	CreatedBy varchar(100) NULL,
-	CreateDateTime datetime NULL,
+	CreateDateTime datetime DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT PK_tblIntegration_Mappings PRIMARY KEY (RecordId)
 )
 CREATE INDEX tblIntegration_Mappings_idx1 ON TimeCurrent.dbo.tblIntegration_Mappings (MapName)
+CREATE UNIQUE INDEX tblIntegration_Mappings_uidx ON TimeCurrent.dbo.tblIntegration_Mappings (MapName,Attribute)
 
 DROP TABLE TimeCurrent.dbo.tblIntegration_Config
 CREATE TABLE TimeCurrent.dbo.tblIntegration_Config(
