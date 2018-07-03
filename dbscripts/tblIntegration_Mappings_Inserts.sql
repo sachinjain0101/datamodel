@@ -325,4 +325,4 @@ INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribut
 -- Kforce
 ----------------------------------------------
 
-
+SET IDENTITY_INSERT TimeCurrent.dbo.tblIntegration_Mappings OFF
