@@ -1,5 +1,7 @@
 SET IDENTITY_INSERT TimeCurrent.dbo.tblIntegration_Mappings ON
-
+----------------------------------------------
+-- Avionte
+----------------------------------------------
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (1, 'Avionte', 'IntegrationKey', '', 1, 'sachin.jain', '2017-12-22 00:10:05.217');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (2, 'Avionte', 'MessageID', '', 1, 'sachin.jain', '2017-12-22 00:10:05.230');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (3, 'Avionte', 'JobID', '', 1, 'sachin.jain', '2017-12-22 00:10:05.230');
@@ -86,11 +88,15 @@ INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribut
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (94, 'Avionte', 'FoxAssignmentNo', '', 1, 'sachin.jain', '2017-12-22 00:10:05.263');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (95, 'Avionte', 'AssignmentCostCenter', '', 1, 'sachin.jain', '2017-12-22 00:10:05.263');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (96, 'Avionte', 'Setting', '', 1, 'sachin.jain', '2017-12-22 00:10:05.263');
+----------------------------------------------
+-- Test
+----------------------------------------------
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (97, 'Test', 'EmployeeFullName', 'EmployeeFirstName+" "+EmployeeLastName', 1, 'sachin.jain', '2018-04-17 15:38:53.373');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (98, 'Test', 'EmployeeID', '(EmployeeID.length<1) ? 9999 : EmployeeID', 1, 'sachin.jain', '2018-04-17 15:38:53.373');
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (99, 'Test', 'EmployeeSSN', '(EmployeeID.length==0||EmployeeID=="0")?"9999":EmployeeSSN.substring(1,4)', 1, 'sachin.jain', '2018-04-17 15:38:53.373');
-
-
+----------------------------------------------
+-- STFM
+----------------------------------------------
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (100, 'STFM', 'IntegrationKey', '', 1, 'sachin.jain',current_timestamp);
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (101, 'STFM', 'MessageID', '', 1, 'sachin.jain',current_timestamp);
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (102, 'STFM', 'JobID', '', 1, 'sachin.jain',current_timestamp);
@@ -213,5 +219,110 @@ INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribut
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (219, 'STFM', 'SaturdayShiftStop', '', 1, 'sachin.jain',current_timestamp);
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (220, 'STFM', 'AssignmentStatus', 'ASSIGN_STATUS', 1, 'sachin.jain',current_timestamp);
 INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (221, 'STFM', 'JobTitleID', 'CSF4', 1, 'sachin.jain',current_timestamp);
+----------------------------------------------
+-- CHG
+----------------------------------------------
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (222, 'CHG', 'IntegrationKey', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (223, 'CHG', 'MessageID', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (224, 'CHG', 'JobID', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (225, 'CHG', 'RecID', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (226, 'CHG', 'TransDateTime', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (227, 'CHG', 'Client', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (228, 'CHG', 'FirstTime', '"Y"', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (229, 'CHG', 'Source', 'Source', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (230, 'CHG', 'BranchName', 'BranchName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (231, 'CHG', 'BranchID', 'BranchID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (232, 'CHG', 'ClientName', 'ClientName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (233, 'CHG', 'ClientID', 'ClientID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (234, 'CHG', 'EmployeeFirstName', 'EmployeeFirstName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (235, 'CHG', 'EmployeeLastName', 'EmployeeLastName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (236, 'CHG', 'EmployeeEmailAddress', 'EmployeeEmailAddress', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (237, 'CHG', 'EmployeeID', 'EmployeeID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (238, 'CHG', 'EmployeeSSN', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (239, 'CHG', 'EmployeePIN', 'EmployeePIN', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (240, 'CHG', 'EmployeeBadge', 'EmployeeBadge', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (241, 'CHG', 'AssignmentNumber', 'AssignmentNumber', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (242, 'CHG', 'JobDescription', 'JobDescription', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (243, 'CHG', 'ClockGroup', 'ClockGroup', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (244, 'CHG', 'AssignmentStartDate', 'AssignmentStartDate', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (245, 'CHG', 'AssignmentEndDate', 'AssignmentEndDate', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (246, 'CHG', 'AssignmentEndReason', 'AssignmentEndReason', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (247, 'CHG', 'DepartmentMapping', 'DepartmentMapping.trim()', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (248, 'CHG', 'DepartmentAbbr', 'DepartmentAbbr.trim()', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (249, 'CHG', 'ClientDepartmentCode', 'ClientDepartmentCode', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (250, 'CHG', 'DepartmentName', '(DepartmentAbbr.trim().Length > 0 )? DepartmentAbbr.trim() + "-" + DepartmentName.trim() : DepartmentName.trim()', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (251, 'CHG', 'ClockMapping', 'ClockMapping', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (252, 'CHG', 'ShiftCode', 'ShiftCode.trim()', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (253, 'CHG', 'BillRate', 'BillRate', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (254, 'CHG', 'PayRate', 'PayRate', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (255, 'CHG', 'OTBillingFactor', 'OTBillingFactor', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (256, 'CHG', 'DTBillingFactor', 'DTBillingFactor', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (257, 'CHG', 'OTPayFactor', 'OTPayFactor', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (258, 'CHG', 'DTPayFactor', 'DTPayFactor', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (259, 'CHG', 'LastDayOfWeek', 'LastDayofWeek', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (260, 'CHG', 'WorkSiteID', 'WorkSiteID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (261, 'CHG', 'WorkSiteName', 'WorkSiteName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (262, 'CHG', 'WorkSiteState', 'WorkSiteState', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (263, 'CHG', 'Approver1FirstName', 'Approver1FirstName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (264, 'CHG', 'Approver1LastName', 'Approver1LastName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (265, 'CHG', 'Approver1Email', 'Approver1Email', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (266, 'CHG', 'Approver2FirstName', 'Approver2FirstName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (267, 'CHG', 'Approver2LastName', 'Approver2LastName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (268, 'CHG', 'Approver2Email', 'Approver2Email', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (269, 'CHG', 'OrderID', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (270, 'CHG', 'Brand', 'BranchID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (271, 'CHG', 'AgencyCode', 'AgencyCode', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (272, 'CHG', 'AgencyName', 'AgencyName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (273, 'CHG', 'VMSEmployeeID', 'AltEmployeeID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (274, 'CHG', 'VMSAssignmentNumber', 'AltAssignmentNumber', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (275, 'CHG', 'VMSCostCenter', 'VMSCostCenter', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (276, 'CHG', 'VMSBuyerID', 'VMSBuyerID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (277, 'CHG', 'VMSRequisitionID', 'VMSRequisitionID', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (278, 'CHG', 'EmployeeOTType', 'EmployeeOTType', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (279, 'CHG', 'ExpenseApproverFName', 'ExpenseApproverFName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (280, 'CHG', 'ExpenseApproverLName', 'ExpenseApproverLName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (281, 'CHG', 'ExpenseApproverEmail', 'ExpenseApproverEmail', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (282, 'CHG', 'ExpenseApprover2FName', 'ExpenseApprover2FName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (283, 'CHG', 'ExpenseApprover2LName', 'ExpenseApprover2LName', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (284, 'CHG', 'ExpenseApprover2Email', 'ExpenseApprover2Email', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (285, 'CHG', 'InOutIndicator', 'InOutIndicator', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (286, 'CHG', 'AlternateWorkSchedule', 'AlternateWorkSchedule', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (287, 'CHG', 'Rounding', 'Rounding', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (288, 'CHG', 'Branding', 'Branding', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (289, 'CHG', 'PayRules', 'PayRules', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (290, 'CHG', 'ApprovalMethod', 'ApprovalMethod', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (291, 'CHG', 'EntryFrequency', 'EntryFrequency', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (292, 'CHG', 'HolidayCode', 'HolidayPay', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (293, 'CHG', 'ConsultantType', 'ConsultantType', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (294, 'CHG', 'ProjectIndicator', 'ProjectTrackingIndicator', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (295, 'CHG', 'ExpenseIndicator', 'ExpenseIndicator', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (296, 'CHG', 'BranchContactPhone', 'BranchContact', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (297, 'CHG', 'EmployeeCellPhone', 'EmployeeCell', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (298, 'CHG', 'EmployeeWebImage', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (299, 'CHG', 'DiscountPercent', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (300, 'CHG', 'NoBill_ExpAprvr_FirstName', 'NonBillExpenseApprover1Fname', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (301, 'CHG', 'NoBill_ExpAprvr_LastName', 'NonBillExpenseApprover1Lname', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (302, 'CHG', 'NoBill_ExpAprvr_Email', 'NonBillExpenseApprover1Email', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (303, 'CHG', 'NoBill_ExpAprvr_FirstName2', 'NonBillExpenseApprover2Fname', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (304, 'CHG', 'NoBill_ExpAprvr_LastName2', 'NonBillExpenseApprover2Lname', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (305, 'CHG', 'NoBill_ExpAprvr_Email2', 'NonBillExpenseApprover2Email', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (306, 'CHG', 'NoBill_TS_Aprvr_FirstName2', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (307, 'CHG', 'NoBill_TS_Aprvr_LastName2', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (308, 'CHG', 'NoBill_TS_Aprvr_Email2', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (309, 'CHG', 'TimeCodes', 'TimeCodes', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (310, 'CHG', 'ExpenseCodes', 'ExpenseCodes', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (311, 'CHG', 'PreventWorkedTime', 'PreventWorkedTime', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (312, 'CHG', 'SortOrder', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (313, 'CHG', 'SalaryIndicator', 'SalaryIndicator', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (314, 'CHG', 'EmployeeCPAFlag', 'EmployeeCPAFlag', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (315, 'CHG', 'ProxyCPAFlag', 'ProxyCPAFlag', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (316, 'CHG', 'MinHours', '', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (317, 'CHG', 'MobileCarrier', 'MobileCarrier', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (318, 'CHG', 'FoxAssignmentNo', 'FOXAssignmentNo', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (319, 'CHG', 'AssignmentCostCenter', 'AssignmentCostCenter', 1, 'sachin.jain',current_timestamp);
+INSERT INTO TimeCurrent.dbo.tblIntegration_Mappings (RecordID, MapName, Attribute, Expression, Version, CreatedBy, CreateDateTime) VALUES (320, 'CHG', 'Setting', 'Setting', 1, 'sachin.jain',current_timestamp);
+----------------------------------------------
+-- Kforce
+----------------------------------------------
 
 
